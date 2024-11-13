@@ -17,7 +17,8 @@ function SignInForm() {
     {
       toast.error(result.message);
     }
-    navigate('/product');
+    localStorage.setItem("email",result.user.email);
+    navigate('/');
 
   };
 
