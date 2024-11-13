@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .product-main {
+    /* width: 100%; */
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    
+  }
+  
+  .product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    /* background-color: red; */
+  }
+  
+  .product-box th,
+  .product-box td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+    box-sizing: border-box;
+  }
+  
+  .product-box th {
+    background-color: #8000ff;
+    color: #ffffff;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .product-box td {
+    color: #333;
+  }
+  
+  .product-box tr td:first-child {
+    font-weight: 500;
+  }
+  
+  .product-box button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* margin-right: 0px; */
+  }
+  
+  .product-update button {
+    background-color: #4caf50;
+  }
+  
+  .product-update button:hover {
+    background-color: #45a049;
+  }
+  
+  .product-delete button {
+    background-color: #e74c3c;
+  }
+  
+  .product-delete button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* ---------------- Modal CSS --------------- */
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the overlay is above other elements */
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+    /* background-color: red; */
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .modal-close-btn:hover {
+    color: #ff0000;
+  }
+  
+  .modal-body {
+      /* background-color: red; */
+    padding-top: 15px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  form {
+    display: flex;
+    /* background-color: red; */
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  /* Input Fields */
+  form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    border-color: #8000ff;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+  }
+  
+  form button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #8000ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #19042f;
+  }
+  
+  /* Error Messages */
+  form .error-message {
+    font-size: 0.9rem;
+    color: #ff4d4d;
+    margin-top: -10px;
+  }
+  
+  .msgs
+  {
+      padding: 10px 5px;
+      width: 100%;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+      /* color: whitesmoke; */
+  }
+  
+  .red
+  {
+      background-color: rgb(227, 126, 126);
+  
+  }
+  
+  .green{
+      background-color:#86f189;
+  }
