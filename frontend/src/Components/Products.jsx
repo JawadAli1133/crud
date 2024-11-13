@@ -37,7 +37,7 @@ const Products = () => {
   const LoadData = async () => {
     try
     {
-      const response = await fetch("http://localhost:8080/products/allproducts", {
+      const response = await fetch("https://crud-delta-six.vercel.app/products/allproducts", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -53,7 +53,7 @@ const Products = () => {
   const onsubmit = async (data) => {
     setisLoading(true);
     const response = await fetch(
-      "http://localhost:8080/products/createproduct",
+      "https://crud-delta-six.vercel.app/products/createproduct",
       {
         method: "POST",
         body: JSON.stringify(data),
@@ -71,7 +71,7 @@ const Products = () => {
 
   const handleDeleteClick = async (id) => {
     const response = await fetch(
-      "http://localhost:8080/products/deleteProduct",
+      "https://crud-delta-six.vercel.app/products/deleteProduct",
       {
         method: "DELETE",
         body: JSON.stringify({ id }),
@@ -95,7 +95,7 @@ const Products = () => {
 
   const onUpdateSubmit = async (data) => {
     const response = await fetch(
-      `http://localhost:8080/products/updateproduct/${editProduct._id}`,
+      `https://crud-delta-six.vercel.app/products/updateproduct/${editProduct._id}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },

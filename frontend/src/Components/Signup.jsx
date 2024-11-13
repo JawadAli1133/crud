@@ -7,7 +7,7 @@ function SignupForm() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = async(data) => {
-    const response = await fetch("http://localhost:8080/user/signup",{
+    const response = await fetch("https://crud-delta-six.vercel.app/user/signup",{
       method: "POST",
       body: JSON.stringify(data),
       headers: {"Content-Type":"application/json"}
